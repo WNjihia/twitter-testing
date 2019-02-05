@@ -4,7 +4,6 @@ class Tweet{
   }
 
   submitTweet(){
-    cy.screenshot('posted-tweet');
     cy.get('.home-tweet-box > .t1-form > .TweetBoxToolbar > .TweetBoxToolbar-tweetButton > .tweet-action').click();
     return this;
   }

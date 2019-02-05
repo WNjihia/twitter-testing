@@ -14,6 +14,7 @@ describe('Creating and Deleting Process', () => {
 
   it('posts a tweet', () => {
     tweet.fillTweetMsg("test");
+    cy.screenshot('posted-tweet', { capture: 'viewport'});
     tweet.submitTweet();
   });
 
@@ -27,7 +28,7 @@ describe('Creating and Deleting Process', () => {
   it('logs user out successfully', () => {
     profile.loadProfile();
     auth.logout();
-    cy.screenshot('logged-out');
+    cy.screenshot('logged-out', { capture: 'viewport'});
   });
 
 });
