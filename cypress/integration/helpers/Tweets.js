@@ -4,19 +4,18 @@ class Tweet{
   }
 
   submitTweet(){
+    cy.screenshot('posted-tweet');
     cy.get('.home-tweet-box > .t1-form > .TweetBoxToolbar > .TweetBoxToolbar-tweetButton > .tweet-action').click();
-
     return this;
   }
 
   loadActionsModal(){
     cy.get('.js-stream-item').first().find('.tweet > .content > .stream-item-header > .ProfileTweet-action > .dropdown > .ProfileTweet-actionButton > .IconContainer > .Icon').click();
-    cy.get('.js-actionDelete > .dropdown-link').click();
+    cy.get('.js-actionDelete > .dropdown-link').click({force: true});
     return this;
   }
 
   deleteTweet(){
-    // cy.screenshot('deleting tweet');
     cy.get('.delete-action', {waitForAnimations: false, force: true}).click();
   }
 

@@ -21,16 +21,13 @@ describe('Creating and Deleting Process', () => {
     profile.loadProfile();
     tweet.loadActionsModal();
     tweet.deleteTweet();
-    cy.wait(500);
-    cy.screenshot('posted-tweet');
     cy.reload();
   });
 
   it('logs user out successfully', () => {
     profile.loadProfile();
-    cy.screenshot('tweet-deleted');
     auth.logout();
-    cy.url.sho
+    cy.screenshot('logged-out');
   });
 
 });
