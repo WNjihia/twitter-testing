@@ -14,7 +14,7 @@ describe('Creating and Deleting Process', () => {
 
   it('posts a tweet', () => {
     tweet.fillTweetMsg("test");
-    cy.screenshot('posted-tweet', { capture: 'viewport'});
+    cy.screenshot('tweet-to-be-posted', { capture: 'viewport'});
     tweet.submitTweet();
   });
 

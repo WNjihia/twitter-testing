@@ -9,6 +9,7 @@ class Tweet{
   }
 
   loadActionsModal(){
+    cy.screenshot('posted-tweet', { capture: 'viewport'});
     cy.get('.js-stream-item').first().find('.tweet > .content > .stream-item-header > .ProfileTweet-action > .dropdown > .ProfileTweet-actionButton > .IconContainer > .Icon').click();
     cy.get('.js-actionDelete > .dropdown-link').click({force: true});
     return this;
