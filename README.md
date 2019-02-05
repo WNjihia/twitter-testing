@@ -12,4 +12,6 @@ Installing cypress
 run `yarn install`
 
 Run the test
-`yarn test`
+`yarn run cypress open`
+
+Once the test runner is open, click on `tweet.spec.js` and watch Cypress open your browser
