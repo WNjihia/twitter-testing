@@ -31,8 +31,9 @@ class Auth{
   }
 
   logout(){
+    cy.screenshot('tweet-deleted');
     cy.get('#user-dropdown-toggle').click();
-    cy.get('.js-signout-button > .dropdown-link').click({force: true});
+    cy.get('#signout-button > .dropdown-link').click({force: true});
 
     return this;
   }
