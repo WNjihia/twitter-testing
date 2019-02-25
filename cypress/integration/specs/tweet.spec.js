@@ -9,7 +9,7 @@ const profile = new Profile();
 describe('Creating and Deleting Process', () => {
   beforeEach(() => {
       auth.visit();
-      auth.login('dorisn172@gmail.com', 'testtest123');
+      auth.login('test@example.com', 'testing123');
     })
 
   it('posts a tweet', () => {
